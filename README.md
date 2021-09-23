@@ -12,9 +12,14 @@ You can listen to music on youtube, write channel messages to a file and see use
 Builded with NestJS
 
 ```bash
-$ gi clone repo
+$ https://github.com/90pixel/dismix-discord-bot
+$ cd dismix-discord-bot
 $ npm install
 ```
+Fill the .env variables and setup your db for logs and new feautres
+
+>Docker soon.
+
 ## Running the app
 
 ```bash
