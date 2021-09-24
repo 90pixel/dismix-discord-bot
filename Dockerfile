@@ -10,7 +10,7 @@ RUN npm cache verify
 
 
 ADD package.json package-lock.json /app/
-ADD .local.env /app/
+ADD .dev.env /app/
 ADD nest-cli.json /app/
 
 ENV NODE_ENV=dev
