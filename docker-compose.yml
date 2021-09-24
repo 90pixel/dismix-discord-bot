@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+      MYSQL_DATABASE: 'dismix'
+    ports:
+      - '3306:3307'
+  dismix_b:
+    image: dismix_bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run start:debug
+    ports:
+      - '4427:4427'
+    volumes:
+      - ./src:/app/src
+      - ./test:/app/test
+      - ./public:/app/public
+    links:
+      - 'db:mysql'
+    depends_on:
+      - db
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+      MYSQL_DATABASE: 'dismix'
+      NODE_ENV: dev

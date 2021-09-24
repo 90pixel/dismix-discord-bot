@@ -18,7 +18,14 @@ $ npm install
 ```
 Fill the .env variables and setup your db for logs and new feautres
 
->Docker soon.
+
+## Run with docker
+
+>Note: Docker files uses .dev.env
+
+```bash
+docker-compose uo -d
+```
 
 ## Running the app
 
