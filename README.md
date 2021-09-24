@@ -23,8 +23,8 @@ Fill the .env variables and setup your db for logs and new feautres
 
 >Note: Docker files uses .dev.env
 
-```bash
-docker-compose uo -d
+```docker
+docker-compose up -d
 ```
 
 ## Running the app
